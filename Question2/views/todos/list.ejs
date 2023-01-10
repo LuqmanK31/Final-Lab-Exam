@@ -5,10 +5,10 @@
 <% for( let index = 0; index < todos.length; index++ ) { %>
 <div>
   <h3><%= todos[index].title %></h3>
+  <p><%= todos[index].description %></p>
   <a href="/todos/delete/<%=todos[index]._id  %>" class="btn btn-danger"
     >Delete</a
   >
   <a href="/todos/edit/<%=todos[index]._id  %>" class="btn btn-warning">Edit</a>
-  <p><%= todos[index].description %></p>
 </div>
 <% } %>
