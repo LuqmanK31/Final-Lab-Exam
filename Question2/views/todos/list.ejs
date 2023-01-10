@@ -1,0 +1,14 @@
+<h2><%= pageTitle %></h2>
+<a class="btn btn-info" href="/todos/add">Add New Task</a>
+<!-- How the games array will be available here -->
+
+<% for( let index = 0; index < todos.length; index++ ) { %>
+<div>
+  <h3><%= todos[index].title %></h3>
+  <a href="/todos/delete/<%=todos[index]._id  %>" class="btn btn-danger"
+    >Delete</a
+  >
+  <a href="/todos/edit/<%=todos[index]._id  %>" class="btn btn-warning">Edit</a>
+  <p><%= todos[index].description %></p>
+</div>
+<% } %>
